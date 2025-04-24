@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="บริการขนส่งสินค้าทั่วประเทศ โดย PINYO 98 LOGISTICS ราคาย่อมเยา รวดเร็วทันใจ พร้อมทีมงานมืออาชีพ">
+  <meta name="keywords" content="ขนส่งสินค้า, ขนส่งทั่วประเทศ, ขนส่งภาคใต้, ขนส่งด่วน, รถขนส่ง, โลจิสติกส์">
+  <meta name="author" content="PINYO 98 LOGISTICS">
+  <title>ขนส่งสินค้าทั่วประเทศ – PINYO 98 LOGISTICS</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; }
+    header, footer { background-color: #0055aa; color: white; text-align: center; padding: 1rem; }
+    section { padding: 2rem; max-width: 800px; margin: auto; background: white; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+    h2 { color: #0055aa; }
+    ul { list-style-type: none; padding: 0; }
+    ul li::before { content: "✅ "; color: green; margin-right: 5px; }
+    form input, form button { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background-color: #0055aa; color: white; border: none; cursor: pointer; }
+    form button:hover { background-color: #003f7f; }
+    .member-card { display: grid; grid-template-columns: 80px auto; gap: 1rem; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 1rem; align-items: center; background: #f9f9f9; }
+    .member-card img { border-radius: 50%; width: 80px; height: 80px; object-fit: cover; }
+    .login-feedback { font-weight: bold; margin-top: 1rem; }
+  </style>
+  <script>
+    // ป้องกันการเข้าถึงโดยไม่ได้ล็อกอิน (สำหรับหน้า member.html เท่านั้น)
+    if (window.location.pathname.includes("member.html") && !localStorage.getItem("isLoggedIn")) {
+      alert("กรุณาเข้าสู่ระบบก่อนใช้งานหน้านี้");
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>ขนส่งสินค้าทั่วประเทศ บริการรวดเร็ว ราคาย่อมเยา – PINYO 98 LOGISTICS</h1>
+  </header>
+
+  <section>
+    <h2>บริการขนส่งสินค้าทั่วประเทศ ด้วยทีมงานมืออาชีพ</h2>
+    <p>
+      หากคุณกำลังมองหาบริการ <strong>ขนส่งสินค้าทั่วประเทศ</strong> ที่ไว้ใจได้ บริการรวดเร็วตรงเวลา และราคาสมเหตุสมผล
+      <strong>PINYO 98 LOGISTICS</strong> คือคำตอบ! เราคือผู้ให้บริการด้านขนส่งที่มีประสบการณ์ในการขนส่งทั้งภาคเหนือ กลาง อีสาน ใต้
+      ด้วยรถขนส่งหลายประเภท พร้อมพนักงานขับรถมืออาชีพ
+    </p>
+  </section>
+
+  <section>
+    <h2>ทำไมต้องเลือก PINYO 98 LOGISTICS?</h2>
+    <ul>
+      <li>บริการขนส่งแบบเหมาคัน และรายชิ้น</li>
+      <li>รองรับการขนส่งระยะไกลทั่วประเทศ</li>
+      <li>จัดส่งตรงเวลา มีระบบติดตามสถานะ</li>
+      <li>ราคาย่อมเยา ไม่บวกเพิ่มเกินจำเป็น</li>
+      <li>ออกเอกสารประกอบภาษีและบัญชีได้</li>
+      <li>มีประกันสินค้า และบริการหลังการขาย</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>พื้นที่ให้บริการ</h2>
+    <p>
+      ขนส่งภาคใต้: สุราษฎร์ธานี, ชุมพร, นครศรีฯ, หาดใหญ่<br>
+      ขนส่งภาคกลาง: กรุงเทพฯ, อยุธยา, นครปฐม<br>
+      ขนส่งภาคเหนือและอีสาน: นครสวรรค์, ขอนแก่น, เชียงใหม่<br>
+      <strong>ครอบคลุมครบทุกจังหวัดทั่วไทย</strong>
+    </p>
+  </section>
+
+  <section>
+    <h2>สมาชิกของเรา</h2>
+    <div class="member-card">
+      <img src="https://via.placeholder.com/80" alt="สมาชิก 1">
+      <div>
+        <h3>คุณสมชาย โลจิสติกส์</h3>
+        <p>สมาชิกระดับ VIP ประจำภาคใต้</p>
+      </div>
+    </div>
+    <div class="member-card">
+      <img src="https://via.placeholder.com/80" alt="สมาชิก 2">
+      <div>
+        <h3>คุณนิกร ถาวรพร</h3>
+        <p>หัวหน้าทีมขับรถพื้นที่ภาคกลาง</p>
+      </div>
+    </div>
+    <p>
+      สมัครเป็นสมาชิกกับเราเพื่อรับสิทธิพิเศษ เช่น ส่วนลดค่าขนส่ง, การแจ้งเตือนสถานะสินค้าอัตโนมัติ, และข่าวสารจาก PINYO 98 LOGISTICS ก่อนใคร
+    </p>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="ชื่อผู้ใช้" required>
+      <input type="password" id="password" placeholder="รหัสผ่าน" required>
+      <button type="submit">เข้าสู่ระบบ</button>
+    </form>
+    <p id="loginResult" class="login-feedback"></p>
+  </section>
+
+  <section>
+    <h2>ติดต่อเรา</h2>
+    <p>
+      โทร: 08X-XXX-XXXX<br>
+      Line: @pinyo98logistics<br>
+      Facebook: <a href="#">facebook.com/pinyo98logistics</a><br>
+      Google Maps: <a href="#">ดูเส้นทางมายังเรา</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PINYO 98 LOGISTICS. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwwQ4WAaY6RbvfimHjLxduYzVsPJzqXE7Zjnar7MhPPz1-588hpaH6MXhyHRx3z-p8Ulg/exec";
+
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      fetch(scriptURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+      })
+      .then(response => response.text())
+      .then(result => {
+        const loginResult = document.getElementById("loginResult");
+        if (result === "success") {
+          loginResult.innerText = "เข้าสู่ระบบสำเร็จ! กำลังนำทาง...";
+          loginResult.style.color = "green";
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("username", username);
+          setTimeout(() => {
+            window.location.href = "member.html";
+          }, 1000);
+        } else {
+          loginResult.innerText = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
+          loginResult.style.color = "red";
+        }
+      })
+      .catch(error => {
+        const loginResult = document.getElementById("loginResult");
+        loginResult.innerText = "เกิดข้อผิดพลาดในการเชื่อมต่อ";
+        loginResult.style.color = "red";
+      });
+    });
+  </script>
+</body>
+</html>
