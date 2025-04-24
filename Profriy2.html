@@ -5,83 +5,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="เกี่ยวกับ PINYO 98 LOGISTICS เราคือผู้ให้บริการขนส่งสินค้าทั่วประเทศ">
   <meta name="keywords" content="เกี่ยวกับเรา, ขนส่ง, PINYO 98 LOGISTICS">
-  <title>เกี่ยวกับเรา – PINYO 98 LOGISTICS</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>บริการจากสวนผู้บริหาร</title>
+  <title>สั่งซื้อทุเรียน - PINYO 98</title>
   <style>
-    #sheet-output table {
-      width: 100%;
-      border-collapse: collapse;
+    body {
+      font-family: 'Prompt', sans-serif;
+      margin: 0;
+      background: #fffef5;
+      color: #333;
     }
-    #sheet-output th, #sheet-output td {
-      border: 1px solid #ccc;
-      padding: 8px;
+
+    header {
+      background: #f5d547;
+      color: #4a3d00;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .promo-box {
+      background: #fff8e1;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 2rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .badge {
+      background: red;
+      color: white;
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .price .original {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 1rem;
+    }
+
+    .price .discount {
+      font-size: 2rem;
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    .gift {
+      margin-top: 0.5rem;
+      color: #388e3c;
+    }
+
+    .review-section {
+      margin: 2rem;
       text-align: center;
     }
-    #sheet-output th {
-      background-color: #f4f4f4;
+
+    .review-section iframe {
+      max-width: 100%;
+      border-radius: 1rem;
+    }
+
+    form#orderForm {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    form#orderForm h3 {
+      margin-bottom: 1rem;
+      color: #c48c00;
+    }
+
+    form#orderForm input {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    form#orderForm button {
+      background-color: #c48c00;
+      color: white;
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      font-size: 1rem;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+
+    form#orderForm button:hover {
+      background-color: #a67600;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>เกี่ยวกับ PINYO 98 LOGISTICS</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">หน้าแรก</a></li>
-        <li><a href="about.html">เกี่ยวกับเรา</a></li>
-        <li><a href="contact.html">ติดต่อเรา</a></li>
-      </ul>
-    </nav>
+    <h1>🍃 PINYO 98 - ทุเรียนหมอนทอง สดจากสวน</h1>
   </header>
 
-  <section>
-    <h2>พันธกิจของเรา</h2>
-    <ul>
-      <li>การบริการขนส่งที่รวดเร็วและปลอดภัย</li>
-      <li>การติดตามสถานะการขนส่งได้ตลอดเวลา</li>
-      <li>ราคายุติธรรมและไม่บวกเกินจำเป็น</li>
-    </ul>
-  </section>
+  <div class="promo-box">
+    <span class="badge">🔥 ฮอตฮิต</span>
+    <h2>ทุเรียนหมอนทอง เกรดพรีเมียม</h2>
+    <p class="price">
+      <span class="original">฿1,200</span>
+      <span class="discount">฿899 / 5 กิโล</span>
+    </p>
+    <p class="gift">🎁 แถมน้ำกะทิฟรี 1 ขวด เมื่อสั่งก่อน 30 เม.ย.</p>
+  </div>
 
-  <!-- ส่วนแสดงข้อมูลจาก Google Sheets -->
-  <section>
-    <h2>ข้อมูลพนักงาน/รายการขนส่ง</h2>
-    <div id="sheet-output">กำลังโหลดข้อมูล...</div>
-  </section>
+  <div class="review-section">
+    <h3>รีวิวจากลูกค้าจริง</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ufzTb0_J9Vk" title="รีวิวทุเรียน" frameborder="0" allowfullscreen></iframe>
+  </div>
 
+  <form id="orderForm" onsubmit="submitOrder(event)">
+    <h3>📦 ฟอร์มสั่งซื้อ</h3>
+    <input type="text" name="name" placeholder="ชื่อ-นามสกุล" required />
+    <input type="tel" name="phone" placeholder="เบอร์โทรศัพท์" required />
+    <input type="text" name="address" placeholder="ที่อยู่จัดส่ง" required />
+    <button type="submit">✅ ยืนยันการสั่งซื้อ</button>
+  </form>
 
-  
-  <!-- JavaScript ดึงข้อมูล -->
   <script>
-    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxJ30ep6Er7kVzYcq6XABzIPdcf-sEvySg2-dteGNiztEDK_6pFbXX6gdKpO6B00oeOHQ/exec';
+    function submitOrder(e) {
+      e.preventDefault();
 
-    fetch(scriptUrl)
-      .then(response => response.json())
-      .then(data => {
-        if (Array.isArray(data) && data.length > 0) {
-          let tableHTML = '<table>';
-          tableHTML += '<thead><tr>';
-          Object.keys(data[0]).forEach(key => {
-            tableHTML += `<th>${key}</th>`;
-          });
-          tableHTML += '</tr></thead><tbody>';
-          data.forEach(row => {
-            tableHTML += '<tr>';
-            Object.values(row).forEach(cell => {
-              tableHTML += `<td>${cell}</td>`;
-            });
-            tableHTML += '</tr>';
-          });
-          tableHTML += '</tbody></table>';
-          document.getElementById('sheet-output').innerHTML = tableHTML;
-        } else {
-          document.getElementById('sheet-output').innerText = 'ไม่มีข้อมูลให้แสดง';
-        }
+      const form = document.getElementById("orderForm");
+      const data = {
+        name: form.name.value,
+        phone: form.phone.value,
+        address: form.address.value
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbyHbWMzUNe77hSccjt1ygWQ5mzHeXFwkRDXZqNKZP0hg3or9dhvaJgmkHuhHCA6Vept/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(response => {
+        alert("📬 สั่งซื้อเรียบร้อย! ทีมงานจะติดต่อกลับไปเร็วๆ นี้ครับ");
+        form.reset();
       })
       .catch(error => {
-        console.error('เกิดข้อผิดพลาด:', error);
-        document.getElementById('sheet-output').innerText = 'โหลดข้อมูลไม่สำเร็จ';
+        alert("❌ เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง");
+        console.error("Error:", error);
       });
+    }
   </script>
+
 </body>
 </html>
