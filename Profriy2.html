@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="เกี่ยวกับ PINYO 98 LOGISTICS เราคือผู้ให้บริการขนส่งสินค้าทั่วประเทศ">
+  <meta name="keywords" content="เกี่ยวกับเรา, ขนส่ง, PINYO 98 LOGISTICS">
+  <title>เกี่ยวกับเรา – PINYO 98 LOGISTICS</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #sheet-output table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    #sheet-output th, #sheet-output td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    #sheet-output th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>เกี่ยวกับ PINYO 98 LOGISTICS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา</a></li>
+        <li><a href="contact.html">ติดต่อเรา</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>พันธกิจของเรา</h2>
+    <ul>
+      <li>การบริการขนส่งที่รวดเร็วและปลอดภัย</li>
+      <li>การติดตามสถานะการขนส่งได้ตลอดเวลา</li>
+      <li>ราคายุติธรรมและไม่บวกเกินจำเป็น</li>
+    </ul>
+  </section>
+
+  <!-- ส่วนแสดงข้อมูลจาก Google Sheets -->
+  <section>
+    <h2>ข้อมูลพนักงาน/รายการขนส่ง</h2>
+    <div id="sheet-output">กำลังโหลดข้อมูล...</div>
+  </section>
+
+
+  
+  <!-- JavaScript ดึงข้อมูล -->
+  <script>
+    const scriptUrl = 'https://script.google.com/macros/s/AKfycbxJ30ep6Er7kVzYcq6XABzIPdcf-sEvySg2-dteGNiztEDK_6pFbXX6gdKpO6B00oeOHQ/exec';
+
+    fetch(scriptUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (Array.isArray(data) && data.length > 0) {
+          let tableHTML = '<table>';
+          tableHTML += '<thead><tr>';
+          Object.keys(data[0]).forEach(key => {
+            tableHTML += `<th>${key}</th>`;
+          });
+          tableHTML += '</tr></thead><tbody>';
+          data.forEach(row => {
+            tableHTML += '<tr>';
+            Object.values(row).forEach(cell => {
+              tableHTML += `<td>${cell}</td>`;
+            });
+            tableHTML += '</tr>';
+          });
+          tableHTML += '</tbody></table>';
+          document.getElementById('sheet-output').innerHTML = tableHTML;
+        } else {
+          document.getElementById('sheet-output').innerText = 'ไม่มีข้อมูลให้แสดง';
+        }
+      })
+      .catch(error => {
+        console.error('เกิดข้อผิดพลาด:', error);
+        document.getElementById('sheet-output').innerText = 'โหลดข้อมูลไม่สำเร็จ';
+      });
+  </script>
+</body>
+</html>

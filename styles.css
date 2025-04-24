@@ -1,80 +1,145 @@
+/* สไตล์สำหรับ PINYO 98 LOGISTICS */
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #0152a4;
+    background-color: #f8f9fa;
+    color: #343a40;
+  }
+  
+  header {
+    background-color: #007bff;
     color: white;
-    padding: 1.5rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-footer {
-    background-color: #0055aa;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-section {
     padding: 20px;
-    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffc107;
+  }
+  
+  section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.member-card {
-    display: grid;
-    grid-template-columns: 80px auto;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  .member-card {
+    display: flex;
     align-items: center;
-    background: #f9f9f9;
-}
-
-.member-card img {
-    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    gap: 15px;
+  }
+  
+  .member-card img {
     width: 80px;
     height: 80px;
     object-fit: cover;
-}
-
-form input, form button {
-    width: 100%;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
+    border-radius: 50%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  input, button {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-form button {
-    background-color: #0055aa;
+  }
+  
+  button {
+    background-color: #007bff;
     color: white;
-    border: none;
+    font-weight: bold;
     cursor: pointer;
-}
-
-form button:hover {
-    background-color: #04386d;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-feedback {
+    text-align: center;
+    color: red;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .member-card {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+    @media (max-width: 480px) {
+        header {
+        padding: 15px;
+        }
+    
+        section {
+        padding: 20px 10px;
+        }
+    
+        h2 {
+        font-size: 1.5em;
+        }
+    
+        input, button {
+        width: 100%;
+        }
+    }  
