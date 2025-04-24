@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Small Business - Pinyo 98 Logistics</title>
+    <title>Pinyo 98 Logistics</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <?!= HtmlService.createHtmlOutputFromFile('css').getContent() ?>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
     <style>
       body {
         font-family: 'Segoe UI', sans-serif;
@@ -26,11 +25,13 @@
         border-top: none;
       }
       .btn-primary {
-        background-color: #007bff;
+        background-color: #315ef1;
         border: none;
+        transition: all 0.3s ease;
       }
       .btn-primary:hover {
-        background-color: #e8eef4;
+        background-color: #4f9efc;
+        color: white;
       }
       footer {
         margin-top: 3rem;
@@ -57,78 +58,82 @@
     </nav>
 
     <!-- Header Section -->
-    <div class="container px-4 px-lg-5 my-5">
-      <div class="row gx-4 gx-lg-5 align-items-center">
-        <div class="col-lg-7">
-          <img class="img-fluid rounded-4 shadow-sm mb-4 mb-lg-0"
-            src="https://img5.pic.in.th/file/secure-sv1/85270ce5-d42c-41c8-bc06-523c9e777cb7.png" alt="..." />
-        </div>
-        <div class="col-lg-5">
-          <h1 class="display-5 fw-bold">แนวคิดผู้บริหาร</h1>
-          <p class="lead">การวางแผน
-            กำหนดเป้าหมาย: กำหนดเป้าหมายที่ชัดเจนและวัดผลได้ เพื่อให้ทุกคนในทีมเข้าใจตรงกันว่าต้องการอะไร
-            วิเคราะห์สถานการณ์: วิเคราะห์สถานการณ์ปัจจุบัน เพื่อทำความเข้าใจจุดแข็ง จุดอ่อน โอกาส และอุปสรรค
-            กำหนดกลยุทธ์: กำหนดกลยุทธ์ที่เหมาะสม เพื่อให้บรรลุเป้าหมายที่ตั้งไว้
-            วางแผนรายละเอียด: วางแผนรายละเอียดของกิจกรรมต่างๆ ที่ต้องทำ รวมถึงกำหนดผู้รับผิดชอบ ระยะเวลา และงบประมาณ
+    <div class="container-fluid py-5 text-white" style="background: linear-gradient(to right, #315ef1, #4f9efc);">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+          <div class="col-lg-7">
+            <img class="img-fluid rounded-4 shadow-sm mb-4 mb-lg-0"
+              src="https://img5.pic.in.th/file/secure-sv1/85270ce5-d42c-41c8-bc06-523c9e777cb7.png" alt="..." />
+          </div>
+          <div class="col-lg-5 text-white">
+            <h1 class="display-5 fw-bold animate__animated animate__fadeInUp">แนวคิดผู้บริหาร</h1>
+            <p class="lead">
+              การวางแผน กำหนดเป้าหมาย วิเคราะห์สถานการณ์ กำหนดกลยุทธ์ และวางแผนรายละเอียดกิจกรรมต่างๆ อย่างชัดเจน
             </p>
-          <a class="btn btn-primary btn-lg px-4 mt-3" href="index.html">กลับหน้าหลัก</a>
+            <a class="btn btn-light btn-lg px-4 mt-3" href="index.html">กลับหน้าหลัก</a>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Call to Action -->
-    <div class="card bg-primary text-white py-4 text-center mb-5">
-      <div class="card-body">
-        <p class="m-0 fs-5"> </p>
       </div>
     </div>
 
     <!-- Cards -->
-    <div class="container px-4 px-lg-5">
+    <div class="container px-4 px-lg-5 my-5">
       <div class="row gx-4 gx-lg-5">
+        <!-- Card 1 -->
         <div class="col-md-4 mb-5">
           <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
-              <h2 class="card-title">วิธีการถ่ายทอดวิชา:</h2>
+            <div class="card-body text-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" alt="Icon" width="64" class="mb-3">
+              <h2 class="card-title">วิธีการถ่ายทอดวิชา</h2>
               <p class="card-text">
-                * การเป็นแบบอย่าง: การกระทำของคุณสำคัญกว่าคำพูด จงใช้ชีวิตให้เป็นตัวอย่างที่ดี
+                เป็นแบบอย่าง สอนอย่างชัดเจน เล่าเรื่องจริง ให้ฝึกฝน รับฟัง แลกเปลี่ยน ด้วยความรักและปรารถนาดี
+                กำหนดเป้าหมาย: กำหนดเป้าหมายที่ชัดเจนและวัดผลได้ เพื่อให้ทุกคนในทีมเข้าใจตรงกันว่าต้องการอะไร
+            วิเคราะห์สถานการณ์: วิเคราะห์สถานการณ์ปัจจุบัน เพื่อทำความเข้าใจจุดแข็ง จุดอ่อน โอกาส และอุปสรรค
+            กำหนดกลยุทธ์: กำหนดกลยุทธ์ที่เหมาะสม เพื่อให้บรรลุเป้าหมายที่ตั้งไว้
+            วางแผนรายละเอียด: วางแผนรายละเอียดของกิจกรรมต่างๆ ที่ต้องทำ รวมถึงกำหนดผู้รับผิดชอบ ระยะเวลา และงบประมาณ              </p>
+            </div>
+            <div class="card-footer text-center">
+              <a class="btn btn-primary btn-sm" href="index.html">กลับหน้าหลัก</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-5">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Service Icon" width="64" class="mb-3">
+              <h2 class="card-title">บริการชั้นนำ</h2>
+              <p class="card-text">
+                ขนส่งทั่วไทย ด้วยความปลอดภัย ตรงเวลา และเชื่อถือได้ มีทีมงานมืออาชีพดูแลตลอดการขนส่ง
                 * การสอนและการอธิบาย: อธิบายแนวคิด หลักการ และวิธีการต่างๆ อย่างชัดเจน
                 * การเล่าเรื่อง: ใช้เรื่องราวและประสบการณ์จริงเพื่อทำให้เข้าใจง่ายและน่าสนใจ
                 * การฝึกฝนและการลงมือทำ: ให้โอกาสในการฝึกฝนและนำสิ่งที่เรียนรู้ไปใช้จริง
                 * การให้คำแนะนำและกำลังใจ: สนับสนุนและให้กำลังใจเมื่อพวกเขาเผชิญกับความท้าทาย
                 * การรับฟังและแลกเปลี่ยน: เปิดใจรับฟังความคิดเห็นและมุมมองของพวกเขา
-               สิ่งที่สำคัญที่สุดคือการถ่ายทอดด้วยความรัก ความปรารถนาดี และความตั้งใจที่จะให้คนรุ่นหลังเติบโตเป็นคนที่ดีและมีความสุขค่ะ คุณมี "วิชา" อะไรในใจเป็นพิเศษไหมคะที่อยากจะแบ่งปัน?
-               </p>
+          
+                  </p>
             </div>
-            <div class="card-footer"><a class="btn btn-primary btn-sm" href="index.html>กลับหน้าหลัก</a></div>
+            <div class="card-footer text-center">
+              <a class="btn btn-primary btn-sm" href="#!">Learn More</a>
+            </div>
           </div>
         </div>
+
+        <!-- Card 3 -->
         <div class="col-md-4 mb-5">
           <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
-              <h2 class="card-title">บริการชั้นนำ</h2>
-              <p class="card-text"> 
-                </p>
-            </div>
-            <div class="card-footer"><a class="btn btn-primary btn-sm" href="index.html">Learn More</a></div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-5">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
-              <h2 class="card-title">การพัฒนาซอฟต์แวร์:</h2>
+            <div class="card-body text-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/1995/1995507.png" alt="Development Icon" width="64" class="mb-3">
+              <h2 class="card-title">การพัฒนาซอฟต์แวร์</h2>
               <p class="card-text">
-                วางแผน: กำหนดความต้องการของลูกค้า ออกแบบระบบ วางแผนการพัฒนา
-                ดำเนินงาน: เขียนโค้ด ทดสอบระบบ แก้ไขข้อผิดพลาด
-                ประเมินผล: ประเมินความพึงพอใจของลูกค้า วิเคราะห์ข้อผิดพลาด ปรับปรุงระบบ
-                การจัดกิจกรรม:*
-                วางแผน: กำหนดวัตถุประสงค์ กำหนดกลุ่มเป้าหมาย วางแผนรายละเอียดกิจกรรม
-                ดำเนินงาน: ประชาสัมพันธ์ จัดเตรียมสถานที่ จัดกิจกรรม
-                ประเมินผล: ประเมินความพึงพอใจของผู้เข้าร่วม วิเคราะห์ข้อผิดพลาด ปรับปรุงการจัดกิจกรรมในอนาคต
-                อยากสอบถามรูปปีหน่อยครับถ้าผมอยากจะเข้าการแข่งขันชิ้นงานผมต้องดำเนินการแบบไหนครับพี่พอจะแนะนำผมได้ไหมครับลูกพี่เพราะผมถามมาหลายคนแล้วแม
-                </p>
+                วางแผน เขียนโค้ด ทดสอบ ประเมินผล พร้อมจัดกิจกรรมส่งเสริมพัฒนาศักยภาพและความคิดสร้างสรรค์
+                
+              </p>
             </div>
-            <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Learn More</a></div>
+            <div class="card-footer text-center">
+              <a class="btn btn-primary btn-sm" href="#!">Learn More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -136,12 +141,13 @@
 
     <!-- Anonymous Box -->
     <div class="container my-4">
-      <div class="p-4 bg-light rounded shadow-sm">
-        <p class="mb-2">การยึดหมั่นในคุณธรรม</p>
-        <p>ห้างหุ้นส่วนจำกัด ภิญโญ 98 โลจิสติกส์ </p>
-        <p>ด้านคุณธรรมและจิตใจ:
-          * ความเมตตาและความเห็นอกเห็นใจ: สอนให้เข้าใจและใส่ใจความรู้สึกของผู้อื่น การแสดงความเมตตาต่อทุกคน
-          * ความซื่อสัตย์และความจริงใจ: เน้นย้ำถึงความสำคัญของการเป็นคนตรงไปตรงมา และการรักษาคำพูด
+      <div class="p-4 rounded shadow-sm" style="background-color: #f0f4ff;">
+        <p class="fw-bold text-primary">การยึดหมั่นในคุณธรรม</p>
+        <p>
+          ห้างหุ้นส่วนจำกัด ภิญโญ 98 โลจิสติกส์<br>
+          ด้านคุณธรรม: เมตตา ซื่อสัตย์ อดทน อภัย ขอบคุณ<br>
+          ด้านทักษะชีวิต: การสื่อสาร แก้ปัญหา ทำงานเป็นทีม การเงิน และสุขภาพ
+           * ความซื่อสัตย์และความจริงใจ: เน้นย้ำถึงความสำคัญของการเป็นคนตรงไปตรงมา และการรักษาคำพูด
           * ความอดทนและความพากเพียร: สอนให้รู้จักความอดทนต่อความยากลำบาก และความมุ่งมั่นในการทำสิ่งที่ตั้งใจ
           * การให้อภัย: สอนให้รู้จักการปล่อยวางความโกรธและความแค้น และการให้โอกาสตัวเองและผู้อื่น
           * การขอบคุณ: สอนให้เห็นคุณค่าของสิ่งที่มี และรู้จักการขอบคุณผู้คนและโอกาสต่างๆ
@@ -151,8 +157,7 @@
           * ทักษะการแก้ปัญหา: สอนให้คิดวิเคราะห์ หาวิธีแก้ไขเมื่อเผชิญกับปัญหาต่างๆ
           * ทักษะการทำงานร่วมกับผู้อื่น: สอนให้เข้าใจบทบาทของตนเองและผู้อื่น การประนีประนอม และการสร้างทีม
           * ทักษะการจัดการการเงิน: สอนให้รู้จักการวางแผนการเงิน การออม และการใช้จ่ายอย่างเหมาะสม
-          * ทักษะการดูแลสุขภาพ: สอนให้เห็นความสำคัญของการดูแลร่างกายและจิตใจ การออกกำลังกาย และการกินอาหารที่มีประโยชน์
-         </p>
+          * ทักษะการดูแลสุขภาพ: สอนให้เห็นความสำคัญของการดูแลร่างกายและจิตใจ การออกกำลังกาย และการกินอาหารที่มีประโยชน์        </p>
       </div>
     </div>
 
@@ -165,22 +170,20 @@
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <?!= HtmlService.createHtmlOutputFromFile('js').getContent() ?>
-    <script src="js/scripts.js"></script>
     <script>
-        function showAlert(event) {
-            event.preventDefault();
-            alert('Thank you for your message!');
-        }
-    
-        function highlightSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth' });
-            section.style.backgroundColor = '#f0f8ff';
-            setTimeout(() => {
-            section.style.backgroundColor = '';
-            }, 2000);
-        }
+      function showAlert(event) {
+        event.preventDefault();
+        alert('ขอบคุณสำหรับข้อความของคุณ!');
+      }
+
+      function highlightSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+        section.style.backgroundColor = '#f0f8ff';
+        setTimeout(() => {
+          section.style.backgroundColor = '';
+        }, 2000);
+      }
     </script>
   </body>
 </html>
