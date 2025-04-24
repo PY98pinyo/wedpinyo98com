@@ -4,135 +4,227 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="บริการขนส่งสินค้าทั่วประเทศ โดย PINYO 98 LOGISTICS ราคาย่อมเยา รวดเร็วทันใจ พร้อมทีมงานมืออาชีพ">
-  <meta name="keywords" content="ขนส่งสินค้า, ขนส่งทั่วประเทศ, ขนส่งภาคใต้, ขนส่งด่วน, รถขนส่ง, โลจิสติกส์">
+  <meta name="keywords" content="ภิญโญ98,ขนส่ง , สวนทุเรียนผู้บริหาร">
   <meta name="author" content="PINYO 98 LOGISTICS">
-  <title>ขนส่งสินค้าทั่วประเทศ – PINYO 98 LOGISTICS</title>
-  <!-- ใส่ใน <head> -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PINYO 98 LOGISTICS</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #004d99;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abb36');
+      background-size: cover;
+      background-position: center;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #004d99;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "\2714";
+      margin-right: 10px;
+      color: #2e8b57;
+    }
+    footer {
+      background-color: #004d99;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    .highlight {
+      background-color: #ffffcc;
+      transition: background-color 0.3s ease;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px;
+      background-color: #004d99;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+    .floating-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #004d99;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>ขนส่งสินค้าทั่วประเทศ บริการรวดเร็ว ราคาย่อมเยา – PINYO 98 LOGISTICS</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">หน้าแรก</a></li>
-        <li><a href="Profriy.html">เกี่ยวกับเรา</a></li>
-        <li><a href="Profriy2.html">ติดต่อเรา</a></li>
-      </ul>
-    </nav>
+    <h1>PINYO 98 LOGISTICS LIMITED PARTNERSHIP</h1>
+    <p>บริการโลจิสติกส์ครบวงจร</p>
   </header>
 
-  <section>
-    <h2>บริการขนส่งสินค้าทั่วประเทศ ด้วยทีมงานมืออาชีพ</h2>
-    <p>
-      หากคุณกำลังมองหาบริการ <strong>ขนส่งสินค้าทั่วประเทศ</strong> ที่ไว้ใจได้ บริการรวดเร็วตรงเวลา และราคาสมเหตุสมผล
-      <strong>PINYO 98 LOGISTICS</strong> คือคำตอบ! เราคือผู้ให้บริการด้านขนส่งที่มีประสบการณ์ในการขนส่งทั้งภาคเหนือ กลาง อีสาน ใต้
-      ด้วยรถขนส่งหลายประเภท พร้อมพนักงานขับรถมืออาชีพ
-    </p>
-  </section>
+  <nav>
+    <a href="#services">บริการ</a>
+    <a href="#highlights">จุดเด่น</a>
+    <a href="#contact">ติดต่อเรา</a>
+  </nav>
 
-  <section>
-    <h2>ทำไมต้องเลือก PINYO 98 LOGISTICS?</h2>
+  <div class="container">
+    <div class="slideshow">
+      <img class="slide active" src="https://img5.pic.in.th/file/secure-sv1/pinyo2.png" alt="slide1">
+      <img class="slide" src="https://img5.pic.in.th/file/secure-sv1/pinyo2.png" alt="slide2">
+      <img class="slide" src="https://images.unsplash.com/photo-1572328863346-8c1a4fdd8f0e" alt="slide3">
+    </div>
+  </div>
+
+  <div class="container" id="services">
+    <h2>บริการของเรา</h2>
     <ul>
-      <li>บริการขนส่งแบบเหมาคัน และรายชิ้น</li>
-      <li>รองรับการขนส่งระยะไกลทั่วประเทศ</li>
-      <li>จัดส่งตรงเวลา มีระบบติดตามสถานะ</li>
-      <li>ราคาย่อมเยา ไม่บวกเพิ่มเกินจำเป็น</li>
-      <li>ออกเอกสารประกอบภาษีและบัญชีได้</li>
-      <li>มีประกันสินค้า และบริการหลังการขาย</li>
+      <li>ขนส่งสินค้าทั้งในประเทศและระหว่างประเทศ</li>
+      <li>บริการขนส่งแบบด่วนหรือนัดหมาย</li>
+      <li>คลังสินค้าและการจัดการสต็อก</li>
+      <li>การจัดการห่วงโซ่อุปทาน</li>
+      <li>บริการจัดส่งพัสดุ</li>
+      <li>ขนส่งสินค้าแบบพิเศษ</li>
+      <li>ให้คำปรึกษาด้านโลจิสติกส์</li>
+      <li>บริการแพ็คสินค้า</li>
     </ul>
-  </section>
+  </div>
 
-  <section>
-    <h2>สมาชิกของเรา</h2>
-    <div class="member-card">
-      <img src="img/c2.jpg" alt="สมาชิก 1">
-      <div>
-        <h3>คุณสมชาย โลจิสติกส์</h3>
-        <p>สมาชิกระดับ VIP ประจำภาคใต้</p>
-      </div>
-    </div>
-    <div class="member-card">
-      <img src="img/DR.jpg" alt="สมาชิก 2">
-      <div>
-        <h3>คุณนิกร ถาวรพร</h3>
-        <p>หัวหน้าทีมขับรถพื้นที่ภาคกลาง</p>
-      </div>
-    </div>
-    <p>
-      สมัครเป็นสมาชิกกับเราเพื่อรับสิทธิพิเศษ เช่น ส่วนลดค่าขนส่ง, การแจ้งเตือนสถานะสินค้าอัตโนมัติ, และข่าวสารจาก PINYO 98 LOGISTICS ก่อนใคร
-    </p>
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="ชื่อผู้ใช้" required>
-      <input type="password" id="password" placeholder="รหัสผ่าน" required>
-      <button type="submit">เข้าสู่ระบบ</button>
+  <div class="container" id="highlights">
+    <h2>จุดเด่นของบริษัท</h2>
+    <ul>
+      <li>บริการหลากหลาย ครอบคลุมทุกความต้องการ</li>
+      <li>ตอบสนองความต้องการเฉพาะของลูกค้า</li>
+      <li>คลังสินค้าทันสมัยและปลอดภัย</li>
+      <li>ทีมงานมืออาชีพให้คำปรึกษา</li>
+      <li>เน้นคุณภาพและความปลอดภัย</li>
+    </ul>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>โทร: 081-xxx-xxxx</p>
+    <p>อีเมล: info@pinyo98logistics.co.th</p>
+    <p>ที่อยู่: 98 ถนนตัวอย่าง แขวงบางนา เขตบางนา กรุงเทพฯ 10260</p>
+    <form onsubmit="showAlert(event)">
+      <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+      <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+      <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
+      <button type="submit">ส่งข้อความ</button>
     </form>
-    <p id="loginResult" class="login-feedback"></p>
-  </section>
+    <button onclick="highlightSection('contact')">เน้นข้อมูลติดต่อ</button>
+  </div>
 
   <footer>
-    <p>&copy; 2025 PINYO 98 LOGISTICS. All rights reserved.</p>
+    <p>&copy; 2025 PINYO 98 LOGISTICS LIMITED PARTNERSHIP. สงวนลิขสิทธิ์</p>
   </footer>
 
-  <script src="script.js"></script>
+  <div class="floating-box" onclick="alert('สอบถามเพิ่มเติมได้ตลอด 24 ชั่วโมง!')">
+    💬 สนใจบริการ? คลิกเลย!
+  </div>
+
   <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      if (username === 'admin' && password === 'password') {
-        document.getElementById('loginResult').textContent = 'เข้าสู่ระบบสำเร็จ!';
-      } else {
-        document.getElementById('loginResult').textContent = 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง';
-      }
-    });
-    function showAlert(event) {
-      event.preventDefault();
-      alert('Thank you for your message!');
-    }
-    function highlightSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: 'smooth' });
-      section.style.backgroundColor = '#f0f8ff';
+    function highlightSection(id) {
+      const section = document.getElementById(id);
+      section.classList.add('highlight');
       setTimeout(() => {
-        section.style.backgroundColor = '';
+        section.classList.remove('highlight');
       }, 2000);
     }
+
     function showAlert(event) {
       event.preventDefault();
-      alert('Thank you for your message!');
-    }const scriptURL = 'https://script.google.com/macros/s/AKfycbwwQ4WAaY6RbvfimHjLxduYzVsPJzqXE7Zjnar7MhPPz1-588hpaH6MXhyHRx3z-p8Ulg/exec';
+      alert("ขอบคุณที่ติดต่อเรา! เราจะติดต่อกลับโดยเร็วที่สุด");
+    }
 
-    document.getElementById("loginForm").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-    
-        const formData = new FormData();
-        formData.append("username", username);
-        formData.append("password", password);
-    
-        fetch(scriptURL, { method: "POST", body: formData })
-            .then((response) => response.text())
-            .then((text) => {
-                if (text === "success") {
-                    window.location.href = "member.html";
-                } else {
-                    alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
-                }
-            })
-            .catch((err) => {
-                console.error("Error:", err);
-                alert("เกิดข้อผิดพลาดในการเชื่อมต่อ");
-            });
-    });
-    
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 4000);
   </script>
 </body>
-</html>
 </html>
