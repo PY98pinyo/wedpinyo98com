@@ -1,218 +1,197 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pinyo 98 Logistics</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    <style>
-      body {
-        font-family: 'Segoe UI', sans-serif;
-        background-color: #f6f8f9;
-      }
-      .navbar-brand {
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
-      .card-title {
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-      .card-footer {
-        background-color: #315ef1;
-        border-top: none;
-      }
-      .btn-primary {
-        background-color: #315ef1;
-        border: none;
-        transition: all 0.3s ease;
-      }
-      .btn-primary:hover {
-        background-color: #4f9efc;
-        color: white;
-      }
-      footer {
-        margin-top: 3rem;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="บริการขนส่งสินค้าทั่วประเทศ โดย PINYO 98 LOGISTICS ราคาย่อมเยา รวดเร็วทันใจ พร้อมทีมงานมืออาชีพ">
+  <meta name="keywords" content="ภิญโญ98,ขนส่ง,สวนทุเรียนผู้บริหาร">
+  <meta name="author" content="PINYO 98 LOGISTICS">
+  <title>Pinyo98 Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  </head> 
+  <styeies>
+    body {
+  font-family: 'Sarabun', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+  text-align: center;
+  color: #0056b3;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.floating-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  animation: bounce 2s infinite;
+}
+
+.highlight {
+  border: 3px solid #ff9800;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff8e1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+ </styeies>
+
+<body>
+   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div class="container px-5">
-        <a class="navbar-brand" href="#!">Pinyo 98 Logistics</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <a class="navbar-brand" href="#">Pinyo 98 Logistics</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#!">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header Section -->
-<!-- แนวคิดผู้บริหาร (พร้อมสไลด์ภาพ) -->
-<div class="container-fluid py-5 text-white" style="background: linear-gradient(to right, #315ef1, #4f9efc);">
-  <div class="container px-4 px-lg-5">
-    <div class="row gx-4 gx-lg-5 align-items-center">
-      
-      <!-- Carousel รูปภาพ -->
-      <div class="col-lg-7 mb-4 mb-lg-0">
-        <div id="executiveCarousel" class="carousel slide shadow rounded-4" data-bs-ride="carousel">
-          <div class="carousel-inner rounded-4">
-            <div class="carousel-item active">
-              <img src="https://img5.pic.in.th/file/secure-sv1/85270ce5-d42c-41c8-bc06-523c9e777cb7.png" class="d-block w-100" alt="ภาพ 1">
-            </div>
-            <div class="carousel-item">
-              <img src="https://img5.pic.in.th/file/secure-sv1/IMG_3951d69f85c41f6496c4.jpeg" class="d-block w-100" alt="ภาพ 2">
-            </div>
-            <div class="carousel-item">
-              <img src="https://img5.pic.in.th/file/secure-sv1/IMG_39252c803f08e1f21bb4.jpeg" class="d-block w-100" alt="ภาพ 3">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#executiveCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#executiveCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-      </div>
+  <div class="container" id="services">
+    <h2>บริการของเรา</h2>
+    <ul>
+      <li>ทีมงานมืออาชีพให้คำปรึกษา</li>
+      <li>เน้นคุณภาพและความปลอดภัย</li>
+    </ul>
+  </div>
 
-      <!-- ข้อความแนวคิด -->
-      <div class="col-lg-5">
-        <h1 class="display-5 fw-bold mb-3 animate__animated animate__fadeInUp">อุดมการผู้บริหาร</h1>
-        <p class="lead">
-          <strong>การวางแผน:</strong> กำหนดเป้าหมายที่ชัดเจนและวิเคราะห์สถานการณ์ เพื่อกำหนดกลยุทธ์ที่เหมาะสม<br><br>
-          <strong>ทีมงาน:</strong> พัฒนาศักยภาพพนักงาน เสริมสร้างความร่วมมือ และผลักดันด้วยใจบริการ<br><br>
-          <strong>การเติบโต:</strong> ขับเคลื่อนองค์กรด้วยความรับผิดชอบ โปร่งใส และใส่ใจสิ่งแวดล้อม
-        </p>
-        <a href="index.html" class="btn btn-light px-4 mt-3">กลับหน้าหลัก</a>
-      </div>
+  <div class="slideshow">
+    <img class="slide active" src="https://img5.pic.in.th/file/secure-sv1/IMG_68591d612bb118a48c1e.md.jpeg" alt="slide1">
+    <img class="slide" src="https://img2.pic.in.th/pic/6ca7cf1776cb82f3d78b940c0ba3e024.md.jpeg" alt="slide2">
+  </div>
 
+  <div class="container" id="gallery">
+    <h2>พันธมิตรเรา</h2>
+    <div class="gallery-grid">
+      <img src="https://img2.pic.in.th/pic/6ca7cf1776cb82f3d78b940c0ba3e024.jpeg" alt="Warehouse">
+      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_33238ab50222398c0282.md.jpeg" alt="Truck Delivery">
+      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_66069fd25f9596194e48.md.jpeg" alt="Teamwork">
+      <img src="https://img5.pic.in.th/file/secure-sv1/IMG_4159b48f43e56552fcdf.md.jpeg" alt="Logistics">
     </div>
   </div>
-</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Cards -->
-    <div class="container px-4 px-lg-5 my-5">
-      <div class="row gx-4 gx-lg-5">
-        <!-- Card 1 -->
-        <div class="col-md-4 mb-5">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <img src="https://cdn-icons-png.flaticon.com/512/4140/4140037.png" alt="Icon" width="64" class="mb-3">
-              <h2 class="card-title">วิธีการถ่ายทอดวิชา</h2>
-              <p class="card-text">การดำเนินงานสื่อสาร: สื่อสารแผนการดำเนินงานให้ทุกคนในทีมเข้าใจตรงกัน
-มอบหมายงาน: มอบหมายงานให้ผู้ที่มีความรู้ความสามารถเหมาะสม
-ติดตามความคืบหน้า: ติดตามความคืบหน้าของงานอย่างสม่ำเสมอ เพื่อให้มั่นใจว่างานเป็นไปตามแผน
-แก้ไขปัญหา: แก้ไขปัญหาที่เกิดขึ้นระหว่างการดำเนินงานอย่างทันท่วงที
-3. การประเมินผล
-ประเมินผลลัพธ์: ประเมินผลลัพธ์ของการดำเนินงาน เพื่อดูว่าบรรลุเป้าหมายที่ตั้งไว้หรือไม่
-วิเคราะห์ข้อผิดพลาด: วิเคราะห์ข้อผิดพลาดที่เกิดขึ้นระหว่างการดำเนินงาน เพื่อนำไปปรับปรุงในอนาคต
-ปรับปรุงแผน: ปรับปรุงแผนการดำเนินงานให้ดีขึ้น โดยพิจารณาจากผลการประเมินและข้อผิดพลาดที่เกิดขึ้น
-</p>
-            </div>
-            <div class="card-footer text-center">
-              <a class="btn btn-primary btn-sm" href="index.html">กลับหน้าหลัก</a>
-            </div>
-          </div>
-        </div>
+  <div class="container" id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>โทร: 096-310-8962</p>
+    <p>อีเมล: info@pinyo98logistics.co.th</p>
+    <p>ที่อยู่: 98 หมู่ 12 ต.บ้านปากทรง อ.พะโต๊ะ จ.ชุมพร 86180</p>
+    <form onsubmit="showAlert(event)">
+      <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+      <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+      <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
+      <button type="submit">ส่งข้อความ</button>
+    </form>
+    <button onclick="highlightSection('contact')">เน้นข้อมูลติดต่อ</button>
+  </div>
 
-        <!-- Card 2 -->
-        <div class="col-md-4 mb-5">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Service Icon" width="64" class="mb-3">
-              <h2 class="card-title">บริการชั้นนำ</h2>
-              <p class="card-text">
-                ขนส่งทั่วไทย ด้วยความปลอดภัย ตรงเวลา และเชื่อถือได้ มีทีมงานมืออาชีพดูแลตลอดการขนส่ง
-                * การสอนและการอธิบาย: อธิบายแนวคิด หลักการ และวิธีการต่างๆ อย่างชัดเจน
-                * การเล่าเรื่อง: ใช้เรื่องราวและประสบการณ์จริงเพื่อทำให้เข้าใจง่ายและน่าสนใจ
-                * การฝึกฝนและการลงมือทำ: ให้โอกาสในการฝึกฝนและนำสิ่งที่เรียนรู้ไปใช้จริง
-                * การให้คำแนะนำและกำลังใจ: สนับสนุนและให้กำลังใจเมื่อพวกเขาเผชิญกับความท้าทาย
-                * การรับฟังและแลกเปลี่ยน: เปิดใจรับฟังความคิดเห็นและมุมมองของพวกเขา
-          
-                  </p>
-            </div>
-            <div class="card-footer text-center">
-              <a class="btn btn-primary btn-sm" href="index.html">กลับหน้าหลัก</a>           
-            </div>
-          </div>
-        </div>
+  <footer>
+    <p>&copy; 2025 PINYO 98 LOGISTICS LIMITED PARTNERSHIP. สงวนลิขสิทธิ์</p>
+  </footer>
 
-        <!-- Card 3 -->
-        <div class="col-md-4 mb-5">
-          <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-              <img src="https://cdn-icons-png.flaticon.com/512/1995/1995507.png" alt="Development Icon" width="64" class="mb-3">
-              <h2 class="card-title">ด้านทักษะชีวิต</h2>
-              <p class="card-text">
-                  การสื่อสาร แก้ปัญหา ทำงานเป็นทีม การเงิน และสุขภาพ
-           * ความซื่อสัตย์และความจริงใจ: เน้นย้ำถึงความสำคัญของการเป็นคนตรงไปตรงมา และการรักษาคำพูด
-          * ความอดทนและความพากเพียร: สอนให้รู้จักความอดทนต่อความยากลำบาก และความมุ่งมั่นในการทำสิ่งที่ตั้งใจ
-          * การให้อภัย: สอนให้รู้จักการปล่อยวางความโกรธและความแค้น และการให้โอกาสตัวเองและผู้อื่น
-          * การขอบคุณ: สอนให้เห็นคุณค่าของสิ่งที่มี และรู้จักการขอบคุณผู้คนและโอกาสต่างๆ
-          * ความเข้มแข็งทางจิตใจ: สอนให้รู้จักการรับมือกับความผิดหวัง ความเครียด และการล้มเหลว
-         ด้านทักษะชีวิต:
-          * ทักษะการสื่อสาร: สอนให้พูดและฟังอย่างมีประสิทธิภาพ การแสดงออกอย่างชัดเจนและเคารพผู้อื่น
-          * ทักษะการแก้ปัญหา: สอนให้คิดวิเคราะห์ หาวิธีแก้ไขเมื่อเผชิญกับปัญหาต่างๆ
-          * ทักษะการทำงานร่วมกับผู้อื่น: สอนให้เข้าใจบทบาทของตนเองและผู้อื่น การประนีประนอม และการสร้างทีม
-          * ทักษะการจัดการการเงิน: สอนให้รู้จักการวางแผนการเงิน การออม และการใช้จ่ายอย่างเหมาะสม
-          * ทักษะการดูแลสุขภาพ: สอนให้เห็นความสำคัญของการดูแลร่างกายและจิตใจ การออกกำลังกาย และการกินอาหารที่มีประโยชน์                
-              </p>
-            </div>
-            <div class="card-footer text-center">
-             <a class="btn btn-primary btn-sm" href="index.html">กลับหน้าหลัก</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="floating-box" onclick="alert('สอบถามเพิ่มเติมได้ตลอด 24 ชั่วโมง!')">
+    💬 สนใจบริการ? คลิกเลย!
+  </div>
 
-    <!-- Anonymous Box -->
-    <div class="container my-4">
-      <div class="p-4 rounded shadow-sm" style="background-color: #f0f4ff;">
-        <p class="fw-bold text-primary">การยึดหมั่นในคุณธรรม</p>
-        <p>สุดท้ายนี้ </p> <br>ห้างหุ้นส่วนจำกัด ภิญโญ 98 โลจิสติกส์<br>
-          เราจะยึดมั่นด้านคุณธรรม เมตตา ซื่อสัตย์ อดทน อภัย ต่ออาชีพของเรา<br>
-                </p>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="py-4 bg-dark text-white-50">
-      <div class="container text-center">
-        <small>&copy; 2025 Pinyo 98 Logistics.</small>
-      </div>
-    </footer>
-
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function showAlert(event) {
-        event.preventDefault();
-        alert('ขอบคุณสำหรับข้อความของคุณ!');
-      }
-
-      function highlightSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        section.scrollIntoView({ behavior: 'smooth' });
-        section.style.backgroundColor = '#f0f8ff';
-        setTimeout(() => {
-          section.style.backgroundColor = '';
-        }, 2000);
-      }
-    </script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
