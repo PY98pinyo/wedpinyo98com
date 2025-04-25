@@ -7,216 +7,223 @@
   <meta name="keywords" content="ภิญโญ98,ขนส่ง,สวนทุเรียนผู้บริหาร">
   <meta name="author" content="PINYO 98 LOGISTICS">
   <title>Pinyo98 Logistics</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
- <style>
-  /* ปุ่มหลัก */
-  .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
-  }
-
-  /* พื้นหลัง hero */
-  .hero-bg {
-    @apply bg-gradient-to-b from-blue-950 to-blue-800 text-white;
-  }
-
-  /* การ์ด */
-  .card {
-    @apply bg-blue-700 p-6 rounded-xl shadow-lg text-white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  /* แกลเลอรี่ */
-  #gallery .relative {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  #gallery img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 15px;
-  }
-
-  #gallery .relative:hover img {
-    transform: scale(1.1);
-  }
-
-  #gallery .absolute {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease;
-  }
-
-  #gallery .absolute .text-white {
-    font-size: 1.25rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-  }
-
-  #gallery .relative:hover .absolute {
-    opacity: 0.9;
-  }
-
-  /* สำหรับมือถือ (หน้าจอเล็ก) */
-  @media (max-width: 768px) {
-    #gallery {
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #004d99;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      background-image: url('https://img5.pic.in.th/file/secure-sv1/line_oa_chat_230719_171425.th.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #004d99;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "\2714";
+      margin-right: 10px;
+      color: #2e8b57;
+    }
+    footer {
+      background-color: #004d99;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    .highlight {
+      background-color: #ffffcc;
+      transition: background-color 0.3s ease;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
       padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
-  }
-
-  @media (max-width: 480px) {
-    #gallery .relative {
-      margin-bottom: 10px;
+    button {
+      padding: 10px;
+      background-color: #004d99;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-
-    #gallery .absolute {
-      font-size: 1rem;
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
     }
-
-    #gallery .absolute .text-white {
-      font-size: 1rem;
+    .floating-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #004d99;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: bounce 1s infinite alternate;
     }
-  }
-</style>
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+  </style>
 </head>
-<body class="bg-blue-900 text-white">
-
-  <!-- Navigation Bar -->
-  <header class="fixed top-0 left-0 w-full bg-blue-950 shadow z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-blue-300 text-xl font-bold">Pinyo98 Logistics</h1>
-      <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-      <nav id="menu" class="hidden md:flex space-x-4 text-sm md:text-base">
-        <a href="about.html" class="btn-primary">บริการ</a>
-        <a href="contact.html" class="btn-primary">ฝากรับ-ส่งสินค้า</a>
-        <a href="Profriy.html" class="btn-primary">ธุระกิจซื้อขายทุเรียน</a>
-        <a href="Profriy2.html" class="btn-primary">แนวคิดเรา</a>
-      </nav>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden bg-blue-950 px-4 pb-4">
-      <a href="#services" class="block btn-primary w-full text-left mb-2">บริการ</a>
-      <a href="#contact" class="block btn-primary w-full text-left mb-2">ติดต่อ</a>
-      <a href="track.html" class="block btn-primary w-full text-left mb-2">ติดตามพัสดุ</a>
-      <a href="admin/login.html" class="block btn-primary w-full text-left">เข้าสู่ระบบแอดมิน</a>
-    </div>
+<body>
+  <header>
+    <h1>PINYO 98 LOGISTICS LIMITED PARTNERSHIP</h1>
+    <p>บริการโลจิสติกส์ครบวงจร</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-bg h-screen flex items-center justify-center text-center px-6 pt-20">
-    <div>
-      <h1 class="text-4xl md:text-6xl font-bold text-blue-300 mb-4">Pinyo98 Logistics</h1>
-      <p class="text-xl md:text-2xl mb-6">ขนส่งด่วน มั่นใจ ถึงไว ใส่ใจทุกเส้นทาง</p>
-      <a href="#services" class="btn-primary">ดูบริการของเรา</a>
-    </div>
-  </section>
+  <nav>
+    <a href="#services">บริการ</a>
+    <a href="#highlights">จุดเด่น</a>
+    <a href="#contact">ติดต่อเรา</a>
+  </nav>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-16 px-6 bg-blue-800">
-    <h2 class="text-3xl font-bold text-center text-blue-300 mb-10">แกลอรี่ของเรา</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="relative">
-        <img src="https://img5.pic.in.th/file/secure-sv1/line_oa_chat_230719_171425.jpeg" alt="ภาพที่ 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
-        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 1</div>
-      </div>
-      <div class="relative">
-        <img src="https://img2.pic.in.th/pic/918D7EA5-E981-4CD8-A568-E778DE540F71.png" alt="ภาพที่ 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
-        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 2</div>
-      </div>
-      <div class="relative">
-        <img src="https://img5.pic.in.th/file/secure-sv1/c15e1f34b88940b5e7.jpg" alt="ภาพที่ 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
-        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 3</div>
-      </div>
+  <div class="container">
+    <div class="slideshow">
+      <img class="slide active" src="https://images.unsplash.com/photo-1581090700227-1e8eab7dd6b0" alt="slide1">
+      <img class="slide" src="https://images.unsplash.com/photo-1598514982830-adee956df4d0" alt="slide2">
+      <img class="slide" src="https://images.unsplash.com/photo-1572328863346-8c1a4fdd8f0e" alt="slide3">
     </div>
-  </section>
+  </div>
 
-  <!-- Services Section -->
-  <section id="services" class="py-16 px-6 bg-blue-800">
-    <h2 class="text-3xl font-bold text-center text-blue-300 mb-10">บริการของเรา</h2>
-    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="card">
-        <h3 class="text-xl font-bold mb-2">ขนส่งรายวัน</h3>
-        <p class="text-blue-100">บริการขนส่งทั่วไทย รายวัน รวดเร็วตรงเวลา</p>
-      </div>
-      <div class="card">
-        <h3 class="text-xl font-bold mb-2">บริการเช่าเหมาคัน</h3>
-        <p class="text-blue-100">เช่ารถบรรทุก รายวัน/รายเดือน พร้อมคนขับมืออาชีพ</p>
-      </div>
-      <div class="card">
-        <h3 class="text-xl font-bold mb-2">ติดตามสถานะ</h3>
-        <p class="text-blue-100">ระบบ Track & Trace พัสดุแบบเรียลไทม์</p>
-      </div>
-    </div>
-  </section>
+  <div class="container" id="services">
+    <h2>บริการของเรา</h2>
+    <ul>
+      <li>ขนส่งสินค้าทั้งในประเทศและระหว่างประเทศ</li>
+      <li>บริการขนส่งแบบด่วนหรือนัดหมาย</li>
+      <li>คลังสินค้าและการจัดการสต็อก</li>
+      <li>การจัดการห่วงโซ่อุปทาน</li>
+      <li>บริการจัดส่งพัสดุ</li>
+      <li>ขนส่งสินค้าแบบพิเศษ</li>
+      <li>ให้คำปรึกษาด้านโลจิสติกส์</li>
+      <li>บริการแพ็คสินค้า</li>
+    </ul>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 bg-blue-950">
-    <h2 class="text-3xl font-bold text-center text-blue-300 mb-10">ติดต่อเรา</h2>
-    <div class="max-w-3xl mx-auto text-center">
-      <p class="text-blue-100 text-lg mb-4">โทร: <a href="tel:0963108962" class="text-blue-300">096-310-8962</a></p>
-      <p class="text-blue-100 text-lg mb-4">อีเมล: <a href="mailto:pinyo98logistics@gmail.com" class="text-blue-300">pinyo98logistics@gmail.com</a></p>
-      <p class="text-blue-100 text-lg">ที่อยู่: 12 หมู่ 2 ต.บ้านปากทรง อ.พะโต๊ะ จ.ชุมพร 86180</p>
-    </div>
-  </section>
+  <div class="container" id="highlights">
+    <h2>จุดเด่นของบริษัท</h2>
+    <ul>
+      <li>บริการหลากหลาย ครอบคลุมทุกความต้องการ</li>
+      <li>ตอบสนองความต้องการเฉพาะของลูกค้า</li>
+      <li>คลังสินค้าทันสมัยและปลอดภัย</li>
+      <li>ทีมงานมืออาชีพให้คำปรึกษา</li>
+      <li>เน้นคุณภาพและความปลอดภัย</li>
+    </ul>
+  </div>
 
-  <!-- Footer -->
-  <footer class="bg-blue-950 text-center text-blue-300 py-6">
-    &copy; 2025 Pinyo98 Logistics. All rights reserved.
+  <div class="container" id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>โทร: 081-xxx-xxxx</p>
+    <p>อีเมล: info@pinyo98logistics.co.th</p>
+    <p>ที่อยู่: 98 ถนนตัวอย่าง แขวงบางนา เขตบางนา กรุงเทพฯ 10260</p>
+    <form onsubmit="showAlert(event)">
+      <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+      <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+      <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
+      <button type="submit">ส่งข้อความ</button>
+    </form>
+    <button onclick="highlightSection('contact')">เน้นข้อมูลติดต่อ</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PINYO 98 LOGISTICS LIMITED PARTNERSHIP. สงวนลิขสิทธิ์</p>
   </footer>
 
-  <!-- JavaScript -->
+  <div class="floating-box" onclick="alert('สอบถามเพิ่มเติมได้ตลอด 24 ชั่วโมง!')">
+    💬 สนใจบริการ? คลิกเลย!
+  </div>
+
   <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Mobile menu toggle
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      const mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Toast welcome message
-    function showToast(message) {
-      const toast = document.createElement('div');
-      toast.className = 'fixed bottom-5 right-5 bg-blue-700 text-white px-4 py-2 rounded shadow-lg animate-bounce';
-      toast.innerText = message;
-      document.body.appendChild(toast);
-      setTimeout(() => toast.remove(), 3000);
+    function highlightSection(id) {
+      const section = document.getElementById(id);
+      section.classList.add('highlight');
+      setTimeout(() => {
+        section.classList.remove('highlight');
+      }, 2000);
     }
 
-    window.onload = () => {
-      showToast('ยินดีต้อนรับสู่ Pinyo98 Logistics!');
-    };
+    function showAlert(event) {
+      event.preventDefault();
+      alert("ขอบคุณที่ติดต่อเรา! เราจะติดต่อกลับโดยเร็วที่สุด");
+    }
+
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 4000);
   </script>
 </body>
 </html>
