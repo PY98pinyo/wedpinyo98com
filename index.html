@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="บริการขนส่งสินค้าทั่วประเทศ โดย PINYO 98 LOGISTICS ราคาย่อมเยา รวดเร็วทันใจ พร้อมทีมงานมืออาชีพ">
-  <meta name="keywords" content="ภิญโญ98,ขนส่ง , สวนทุเรียนผู้บริหาร">
+  <meta name="keywords" content="ภิญโญ98,ขนส่ง,สวนทุเรียนผู้บริหาร">
   <meta name="author" content="PINYO 98 LOGISTICS">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pinyo98 Logistics</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
@@ -20,53 +19,51 @@
       @apply bg-blue-700 p-6 rounded-xl shadow text-white;
     }
 
-    /* Gallery styles */
-#gallery .relative {
-  position: relative;
-  overflow: hidden;
-}
+    #gallery .relative {
+      position: relative;
+      overflow: hidden;
+    }
 
-#gallery img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
+    #gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
 
-#gallery .relative:hover img {
-  transform: scale(1.1);
-}
+    #gallery .relative:hover img {
+      transform: scale(1.1);
+    }
 
-#gallery .absolute {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
+    #gallery .absolute {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
 
-#gallery .absolute .text-white {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
+    #gallery .absolute .text-white {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  #gallery {
-    padding: 10px;
-  }
-}
+    @media (max-width: 768px) {
+      #gallery {
+        padding: 10px;
+      }
+    }
 
-@media (max-width: 480px) {
-  #gallery .relative {
-    margin-bottom: 10px;
-  }
+    @media (max-width: 480px) {
+      #gallery .relative {
+        margin-bottom: 10px;
+      }
 
-  #gallery .absolute {
-    font-size: 1rem;
-  }
-}
+      #gallery .absolute {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body class="bg-blue-900 text-white">
@@ -89,33 +86,14 @@
       </nav>
     </div>
 
-<header class="fixed top-0 left-0 w-full bg-blue-950 shadow z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-    <h1 class="text-blue-300 text-xl font-bold">Pinyo98 Logistics</h1>
-    <button id="menu-toggle" class="text-white md:hidden focus:outline-none">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-    <nav id="menu" class="hidden md:flex space-x-4 text-sm md:text-base">
-      <a href="#services" class="btn-primary">บริการ</a>
-      <a href="#contact" class="btn-primary">ติดต่อ</a>
-      <a href="track.html" class="btn-primary">ติดตามพัสดุ</a>
-      <a href="admin/login.html" class="btn-primary">เข้าสู่ระบบแอดมิน</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="md:hidden hidden bg-blue-950 px-4 pb-4">
-    <a href="#services" class="block btn-primary w-full text-left mb-2">บริการ</a>
-    <a href="#contact" class="block btn-primary w-full text-left mb-2">ติดต่อ</a>
-    <a href="track.html" class="block btn-primary w-full text-left mb-2">ติดตามพัสดุ</a>
-    <a href="admin/login.html" class="block btn-primary w-full text-left">เข้าสู่ระบบแอดมิน</a>
-  </div>
-</header>
-
-
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-blue-950 px-4 pb-4">
+      <a href="#services" class="block btn-primary w-full text-left mb-2">บริการ</a>
+      <a href="#contact" class="block btn-primary w-full text-left mb-2">ติดต่อ</a>
+      <a href="track.html" class="block btn-primary w-full text-left mb-2">ติดตามพัสดุ</a>
+      <a href="admin/login.html" class="block btn-primary w-full text-left">เข้าสู่ระบบแอดมิน</a>
+    </div>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero-bg h-screen flex items-center justify-center text-center px-6 pt-20">
@@ -125,28 +103,29 @@
       <a href="#services" class="btn-primary">ดูบริการของเรา</a>
     </div>
   </section>
-<!-- Gallery Section -->
-<section id="gallery" class="py-16 px-6 bg-blue-800">
-  <h2 class="text-3xl font-bold text-center text-blue-300 mb-10">แกลอรี่ของเรา</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-    <div class="relative">
-      <img src="https://img5.pic.in.th/file/secure-sv1/line_oa_chat_230719_171425.jpeg" alt="ภาพที่ 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
-      <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-      <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 1</div>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 px-6 bg-blue-800">
+    <h2 class="text-3xl font-bold text-center text-blue-300 mb-10">แกลอรี่ของเรา</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="relative">
+        <img src="https://img5.pic.in.th/file/secure-sv1/line_oa_chat_230719_171425.jpeg" alt="ภาพที่ 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 1</div>
+      </div>
+      <div class="relative">
+        <img src="https://img2.pic.in.th/pic/918D7EA5-E981-4CD8-A568-E778DE540F71.png" alt="ภาพที่ 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 2</div>
+      </div>
+      <div class="relative">
+        <img src="https://img5.pic.in.th/file/secure-sv1/c15e1f34b88940b5e7.jpg" alt="ภาพที่ 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+        <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 3</div>
+      </div>
     </div>
-    <div class="relative">
-      <img src="https://img2.pic.in.th/pic/918D7EA5-E981-4CD8-A568-E778DE540F71.png" alt="ภาพที่ 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
-      <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-      <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 2</div>
-    </div>
-    <div class="relative">
-      <img src="https://img5.pic.in.th/file/secure-sv1/c15e1f34b88940b5e7.jpg alt="ภาพที่ 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
-      <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-      <div class="absolute bottom-4 left-4 text-white text-lg font-semibold">ภาพที่ 3</div>
-    </div>
-    <!-- เพิ่มรูปภาพตามต้องการ -->
-  </div>
-</section>
+  </section>
+
   <!-- Services Section -->
   <section id="services" class="py-16 px-6 bg-blue-800">
     <h2 class="text-3xl font-bold text-center text-blue-300 mb-10">บริการของเรา</h2>
@@ -183,7 +162,7 @@
 
   <!-- JavaScript -->
   <script>
-    // Smooth scroll behavior for anchor links
+    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -193,7 +172,7 @@
       });
     });
 
-    // Toggle mobile menu
+    // Mobile menu toggle
     document.getElementById('menu-toggle').addEventListener('click', () => {
       const mobileMenu = document.getElementById('mobile-menu');
       mobileMenu.classList.toggle('hidden');
@@ -211,13 +190,6 @@
     window.onload = () => {
       showToast('ยินดีต้อนรับสู่ Pinyo98 Logistics!');
     };
-
- 
-  // Toggle mobile menu
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
+  </script>
 </body>
 </html>
