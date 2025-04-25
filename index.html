@@ -8,63 +8,90 @@
   <meta name="author" content="PINYO 98 LOGISTICS">
   <title>Pinyo98 Logistics</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    .btn-primary {
-      @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition;
-    }
-    .hero-bg {
-      @apply bg-gradient-to-b from-blue-950 to-blue-800 text-white;
-    }
-    .card {
-      @apply bg-blue-700 p-6 rounded-xl shadow text-white;
-    }
+ <style>
+  /* ปุ่มหลัก */
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105;
+  }
 
+  /* พื้นหลัง hero */
+  .hero-bg {
+    @apply bg-gradient-to-b from-blue-950 to-blue-800 text-white;
+  }
+
+  /* การ์ด */
+  .card {
+    @apply bg-blue-700 p-6 rounded-xl shadow-lg text-white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* แกลเลอรี่ */
+  #gallery .relative {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+  }
+
+  #gallery .relative:hover img {
+    transform: scale(1.1);
+  }
+
+  #gallery .absolute {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+  }
+
+  #gallery .absolute .text-white {
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  #gallery .relative:hover .absolute {
+    opacity: 0.9;
+  }
+
+  /* สำหรับมือถือ (หน้าจอเล็ก) */
+  @media (max-width: 768px) {
+    #gallery {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
     #gallery .relative {
-      position: relative;
-      overflow: hidden;
-    }
-
-    #gallery img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    #gallery .relative:hover img {
-      transform: scale(1.1);
+      margin-bottom: 10px;
     }
 
     #gallery .absolute {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 5px 10px;
-      border-radius: 5px;
+      font-size: 1rem;
     }
 
     #gallery .absolute .text-white {
-      font-size: 1.25rem;
-      font-weight: bold;
+      font-size: 1rem;
     }
-
-    @media (max-width: 768px) {
-      #gallery {
-        padding: 10px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #gallery .relative {
-        margin-bottom: 10px;
-      }
-
-      #gallery .absolute {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body class="bg-blue-900 text-white">
 
