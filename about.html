@@ -8,21 +8,108 @@
   <meta name="author" content="PINYO 98 LOGISTICS">
   <title>ขนส่งสินค้าทั่วประเทศ – PINYO 98 LOGISTICS</title>
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; }
-    header, footer { background-color: #0055aa; color: white; text-align: center; padding: 1rem; }
-    section { padding: 2rem; max-width: 800px; margin: auto; background: white; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    h2 { color: #0055aa; }
-    ul { list-style-type: none; padding: 0; }
-    ul li::before { content: "✅ "; color: green; margin-right: 5px; }
-    form input, form button { width: 100%; padding: 0.75rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 5px; }
-    form button { background-color: #0055aa; color: white; border: none; cursor: pointer; }
-    form button:hover { background-color: #003f7f; }
-    .member-card { display: grid; grid-template-columns: 80px auto; gap: 1rem; padding: 1rem; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 1rem; align-items: center; background: #f9f9f9; }
-    .member-card img { border-radius: 50%; width: 80px; height: 80px; object-fit: cover; }
-    .login-feedback { font-weight: bold; margin-top: 1rem; }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Prompt', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header, footer {
+      background-color: #0055aa;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    nav {
+      background-color: #003f7f;
+      text-align: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #0055aa;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "✅ ";
+      color: green;
+      margin-right: 5px;
+    }
+    form input, form button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #0055aa;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #003f7f;
+    }
+    .member-card {
+      display: grid;
+      grid-template-columns: 80px auto;
+      gap: 1rem;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      align-items: center;
+      background: #f9f9f9;
+    }
+    .member-card img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+    }
+    .login-feedback {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 1rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
   </style>
   <script>
-    // ป้องกันการเข้าถึงโดยไม่ได้ล็อกอิน (สำหรับหน้า member.html เท่านั้น)
+    // ป้องกันการเข้าถึงหน้า member โดยไม่ล็อกอิน
     if (window.location.pathname.includes("member.html") && !localStorage.getItem("isLoggedIn")) {
       alert("กรุณาเข้าสู่ระบบก่อนใช้งานหน้านี้");
       window.location.href = "index.html";
@@ -34,6 +121,13 @@
     <h1>ขนส่งสินค้าทั่วประเทศ บริการรวดเร็ว ราคาย่อมเยา – PINYO 98 LOGISTICS</h1>
   </header>
 
+  <nav>
+    <a href="about.html">บริการ</a>
+    <a href="Profriy2.html">ซื้อขายทุเรียน</a>
+    <a href="Profriy.html">แนวคิดผู้บริหาร</a> 
+    <a href="loginform.html">ติดต่อฝากส่งสินค้า</a>
+  </nav>
+
   <section>
     <h2>บริการขนส่งสินค้าทั่วประเทศ ด้วยทีมงานมืออาชีพ</h2>
     <p>
@@ -42,12 +136,7 @@
       ด้วยรถขนส่งหลายประเภท พร้อมพนักงานขับรถมืออาชีพ
     </p>
   </section>
-<nav>
-    <a href="about.html">บริการ</a>
-    <a href="Profriy2.html">ซื้อขายทุเรียน</a>
-    <a href="Profriy.html">แนวคิดผู้บริหาร</a> 
-    <a href="loginform.html">ติดต่อฝากส่งสินค้า</a>
-  </nav>
+
   <section>
     <h2>ทำไมต้องเลือก PINYO 98 LOGISTICS?</h2>
     <ul>
@@ -86,7 +175,21 @@
         <p>หัวหน้าทีมขับรถพื้นที่ภาคกลาง</p>
       </div>
     </div>
-    <p>
+      <h2>สมาชิกของเรา</h2>
+    <div class="member-card">
+      <img src="https://via.placeholder.com/80" alt="สมาชิก 1">
+      <div>
+        <h3>คุณสมชาย โลจิสติกส์</h3>
+        <p>สมาชิกระดับ VIP ประจำภาคใต้</p>
+      </div>
+    </div>
+    <div class="member-card">
+      <img src="https://via.placeholder.com/80" alt="สมาชิก 2">
+      <div>
+        <h3>คุณนิกร ถาวรพร</h3>
+        <p>หัวหน้าทีมขับรถพื้นที่ภาคกลาง</p>
+      </div>
+    </div>    <p>
       สมัครเป็นสมาชิกกับเราเพื่อรับสิทธิพิเศษ เช่น ส่วนลดค่าขนส่ง, การแจ้งเตือนสถานะสินค้าอัตโนมัติ, และข่าวสารจาก PINYO 98 LOGISTICS ก่อนใคร
     </p>
     <form id="loginForm">
@@ -96,8 +199,6 @@
     </form>
     <p id="loginResult" class="login-feedback"></p>
   </section>
-
-
 
   <footer>
     <p>&copy; 2025 PINYO 98 LOGISTICS. All rights reserved.</p>
