@@ -128,6 +128,23 @@
     .slide.active {
       opacity: 1;
     }
+    .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -174,7 +191,15 @@
       <li>เน้นคุณภาพและความปลอดภัย</li>
     </ul>
   </div>
-
+  <div class="container" id="gallery">
+    <h2>ภาพบรรยากาศการทำงาน</h2>
+    <div class="gallery-grid">
+      <img src="https://img5.pic.in.th/file/secure-sv1/line_oa_chat_230719_171425.th.jpeg" alt="Warehouse">
+      <img src="https://images.unsplash.com/photo-1600195077071-cb550a6b458d" alt="Truck Delivery">
+      <img src="https://images.unsplash.com/photo-1603126852030-7b497b16dc6d" alt="Teamwork">
+      <img src="https://images.unsplash.com/photo-1603993097397-89d67b1c9b93" alt="Logistics">
+    </div>
+  </div>
   <div class="container" id="contact">
     <h2>ติดต่อเรา</h2>
     <p>โทร: 081-xxx-xxxx</p>
