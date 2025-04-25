@@ -10,143 +10,159 @@
   <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-<style>
-  body {
-  font-family: 'Sarabun', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
-  color: #333;
-}
+  <style>
+    body {
+      font-family: 'Sarabun', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      color: #333;
+    }
 
-.container {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-  background-color: #fff;
-  border-radius: 16px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
 
-h2 {
-  text-align: center;
-  color: #0056b3;
-}
+    h2 {
+      text-align: center;
+      color: #0056b3;
+    }
 
-ul {
-  padding-left: 20px;
-}
+    ul {
+      padding-left: 20px;
+    }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
 
-.gallery-grid img {
-  width: 100%;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
 
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
 
-form input, form textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
 
-form button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
+    form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-form button:hover {
-  background-color: #0056b3;
-}
+    form button:hover {
+      background-color: #0056b3;
+    }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
 
-.floating-box {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #28a745;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  animation: bounce 2s infinite;
-}
+    .floating-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      animation: bounce 2s infinite;
+    }
 
-.highlight {
-  border: 3px solid #ff9800;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #fff8e1;
-}
+    .highlight {
+      border: 3px solid #ff9800;
+      border-radius: 12px;
+      padding: 20px;
+      background-color: #fff8e1;
+    }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
 
-.slideshow {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+    .slideshow {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 
-.slide {
-  width: 100%;
-  display: none;
-  transition: opacity 1s ease-in-out;
-}
+    .slide {
+      width: 100%;
+      display: none;
+      transition: opacity 1s ease-in-out;
+    }
 
-.slide.active {
-  display: block;
-}
-</style>
-  
+    .slide.active {
+      display: block;
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
 <body>
-   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div class="container px-5">
-        <a class="navbar-brand" href="#">Pinyo 98 Logistics</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container px-5">
+      <a class="navbar-brand" href="#">Pinyo 98 Logistics</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
+  <!-- Services -->
   <div class="container" id="services">
     <h2>บริการของเรา</h2>
     <ul>
@@ -155,11 +171,13 @@ footer {
     </ul>
   </div>
 
+  <!-- Slideshow -->
   <div class="slideshow">
     <img class="slide active" src="https://img5.pic.in.th/file/secure-sv1/IMG_68591d612bb118a48c1e.md.jpeg" alt="slide1">
     <img class="slide" src="https://img2.pic.in.th/pic/6ca7cf1776cb82f3d78b940c0ba3e024.md.jpeg" alt="slide2">
   </div>
 
+  <!-- Gallery -->
   <div class="container" id="gallery">
     <h2>พันธมิตรเรา</h2>
     <div class="gallery-grid">
@@ -170,6 +188,7 @@ footer {
     </div>
   </div>
 
+  <!-- Contact -->
   <div class="container" id="contact">
     <h2>ติดต่อเรา</h2>
     <p>โทร: 096-310-8962</p>
@@ -184,15 +203,46 @@ footer {
     <button onclick="highlightSection('contact')">เน้นข้อมูลติดต่อ</button>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 PINYO 98 LOGISTICS LIMITED PARTNERSHIP. สงวนลิขสิทธิ์</p>
   </footer>
 
+  <!-- Floating Box -->
   <div class="floating-box" onclick="alert('สอบถามเพิ่มเติมได้ตลอด 24 ชั่วโมง!')">
     💬 สนใจบริการ? คลิกเลย!
   </div>
 
-  <script src="script.js"></script>
-  </head>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+
+  <!-- Scripts -->
+  <script>
+    function showAlert(event) {
+      event.preventDefault();
+      alert("ขอบคุณที่ติดต่อเรา! เราจะติดต่อกลับโดยเร็วที่สุด");
+    }
+
+    function highlightSection(id) {
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: "smooth" });
+      section.classList.add("highlight");
+      setTimeout(() => section.classList.remove("highlight"), 3000);
+    }
+
+    let slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000);
+  </script>
 </body>
 </html>
